@@ -1,8 +1,14 @@
 import * as THREE from 'three';
 
-const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(45, innerWidth / innerHeight, 0.01, 1000);
-const renderer = new THREE.WebGLRenderer();
+let camera, scene, renderer;
+
+function init() {
+  scene = new THREE.Scene();
+  camera = new THREE.PerspectiveCamera(45, innerWidth / innerHeight, 0.01, 1000);
+  renderer = new THREE.WebGLRenderer();
+}
+
+init();
 
 renderer.setSize(innerWidth, innerHeight);
 
